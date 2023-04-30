@@ -91,10 +91,9 @@ GROUP BY Rank
 
 /* Average age of the astronauts in the data set */
 
-SELECT AVG(DATEDIFF(year, 
-CAST(`Birth_Date` AS DATE), CURRENT_DATE())) 
-AS Avg_Age
+SELECT Rank, COUNT(*) AS Total
 FROM astronaut_data
+GROUP BY Rank;
 
 
 -- COMMAND ----------
